@@ -1,0 +1,31 @@
+{
+  "name": "@ttungbmt/vuex-form",
+  "version": "0.0.1",
+  "description": "A simple Vue plugin that allows you to manage your forms using vuex.",
+  "source": "src/index.js",
+  "main": "dist/vuex-form.js",
+  "module": "dist/vuex-form.module.js",
+  "unpkg": "dist/vuex-form.umd.js",
+  "scripts": {
+    "clean": "rm -rf dist/*"
+  },
+  "dependencies": {
+
+  },
+  "devDependencies": {
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ttungbmt/vuex-form.git"
+  },
+  "keywords": [
+    "vue",
+    "vuejs",
+    "vuex",
+    "form",
+    "validation"
+  ],
+  "author": "Truong Thanh Tung",
+  "license": "MIT"
+}

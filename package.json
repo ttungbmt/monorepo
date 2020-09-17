@@ -1,0 +1,28 @@
+{
+  "name": "@ttungbmt/monorepo",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Lerna Monorepo",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "clean": "lerna run --parallel clean",
+    "dev": "lerna run dev --parallel",
+    "dev:core": "lerna run dev --parallel --scope \"@blueprintjs/{core,icons,docs-app}\"",
+    "dist": "run-s dist:libs dist:apps",
+    "dist:libs": "lerna run dist --parallel --scope \"@blueprintjs/{core,datetime,docs-theme,icons,select,table,timezone}\"",
+    "dist:apps": "lerna run dist --parallel --scope \"@blueprintjs/{docs-app,landing-app,table-dev-app}\""
+  },
+  "dependencies": {
+    "cross-env": "^7.0.2",
+    "lerna": "^3.22.1",
+    "npm-run-all": "^4.1.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ttungbmt/monorepo.git"
+  },
+  "author": "Truong Thanh Tung",
+  "license": "MIT"
+}

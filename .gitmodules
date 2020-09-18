@@ -1,3 +1,0 @@
-[submodule "packages/microbundle"]
-	path = packages/microbundle
-	url = https://github.com/ttungbmt/microbundle.git

@@ -1,0 +1,22 @@
+{
+  "name": "@ttungbmt/utils",
+  "version": "0.0.1",
+  "license": "MIT",
+  "main": "dist/utils.js",
+  "esmodule": "dist/utils.modern.js",
+  "unpkg": "dist/utils.umd.js",
+  "source": "src/index.js",
+  "sideEffects": false,
+  "scripts": {
+    "clean": "rm -rf dist/*",
+    "dev": "microbundle watch --no-compress --format modern,cjs",
+    "build": "microbundle --no-compress --format modern,cjs"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "collect.js": "^4.28.2",
+    "dotenv": "^8.2.0",
+    "lodash": "^4.17.20",
+    "lodash-es": "^4.17.15"
+  }
+}

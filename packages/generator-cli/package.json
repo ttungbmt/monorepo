@@ -1,0 +1,29 @@
+{
+  "name": "@ttungbmt/generator-cli",
+  "version": "0.0.1",
+  "description": "A CLI generator",
+  "preferGlobal": true,
+  "bin": {
+    "gen-lib": "bin/library-generator.js",
+    "gen-vue": "bin/vue-generator.js",
+    "gen-react": "bin/react-generator.js"
+  },
+  "scripts": {},
+  "author": "Truong Thanh Tung",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ttungbmt/vue-generator.git"
+  },
+  "homepage": "https://github.com/ttungbmt/vue-generator#readme",
+  "dependencies": {
+    "module-alias": "^2.2.2",
+    "plop": "^2.6.0"
+  },
+  "_moduleAliases": {
+    "@react": "src/react",
+    "@vue": "src/vue",
+    "@lib": "src/lib",
+    "@utils": "src/utils"
+  }
+}

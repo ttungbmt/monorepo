@@ -1,0 +1,32 @@
+{
+  "name": "{{packageName}}",
+  "version": "{{version}}",
+  "description": "{{description}}",
+  "main": "dist/{{name}}.common.js",
+  "module": "dist/{{name}}.esm.js",
+  "unpkg": "dist/{{name}}.js",
+  "jsdelivr": "dist/{{name}}.js",
+  "files": [
+    "src",
+    "dist/*.js"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "dev": "run-p watch push",
+    "watch": "microbundle watch --no-compress --format modern,cjs",
+    "build": "microbundle --no-compress --format modern,cjs",
+    "push": "nodemon -x yalc push"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/{{github}}.git"
+  },
+  "keywords": [
+  ],
+  "author": "{{author}}",
+  "license": "{{license}}",
+  "homepage": "https://github.com/{{github}}#readme",
+  "devDependencies": {
+
+  }
+}

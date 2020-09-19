@@ -1,10 +1,10 @@
 {
-  "name": "@ttungbmt/vuex-form",
+  "name": "@ttungbmt/vuex-toolkit",
   "version": "0.0.1",
-  "description": "A simple Vue plugin that allows you to manage your forms using vuex.",
-  "main": "dist/vuex-form.js",
-  "esmodule": "dist/vuex-form.modern.js",
-  "unpkg": "dist/vuex-form.umd.js",
+  "description": "The opinionated, batteries-included toolset for efficient Vuex development",
+  "main": "dist/vuex-toolkit.js",
+  "esmodule": "dist/vuex-toolkit.modern.js",
+  "unpkg": "dist/vuex-toolkit.umd.js",
   "source": "src/index.js",
   "scripts": {
     "clean": "rm -rf dist/*",
@@ -20,25 +20,23 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:ttungbmt/vuex-form.git"
+    "url": "git@github.com:ttungbmt/vuex-toolkit.git"
   },
   "keywords": [
     "vue",
     "vuejs",
     "vuex",
-    "form",
-    "validation"
+    "toolkit"
   ],
   "author": "Truong Thanh Tung",
   "license": "MIT",
   "dependencies": {
-    "@braid/vue-formulate": "^2.4.3",
-    "@ttungbmt/vuex-toolkit": "^0.0.1",
     "lodash-es": "^4.17.15",
-    "uniqid": "^5.2.0",
-    "vee-validate": "^3.3.11",
     "vue": "^2.6.12",
-    "vue-select": "^3.10.8",
-    "vuex-map-fields": "^1.4.0"
+    "vue-deepset": "^0.6.3",
+    "vue-lodash": "^2.1.2",
+    "vue2-filters": "^0.11.0",
+    "vuex": "^3.5.1",
+    "vuex-pathify": "^1.4.1"
   }
 }

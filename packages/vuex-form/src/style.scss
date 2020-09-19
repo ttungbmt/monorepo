@@ -1,0 +1,22 @@
+.m-btn {
+  padding: 6px 12px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 1.5;
+  border-radius: .25rem;
+  border: 1px solid transparent;
+  outline: 0!important;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.m-btn-white {
+  background-color: #f5f5f5;
+  &:hover {
+    background-color: #e3e3e3;
+  }
+}
+
+.m-btn-3d {
+  box-shadow: inset 0 -2px 0 rgba(0,0,0,.15);
+}

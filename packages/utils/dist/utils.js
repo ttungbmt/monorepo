@@ -72,6 +72,55 @@ function env(key, _default) {
   }).get(key, _default);
 }
 
+/**
+ * @render utils
+ * @name toRoman
+ * @param num
+ * @returns {string}
+ * @description Convert number to roman.
+ * https://forum.freecodecamp.org/t/freecodecamp-challenge-guide-roman-numeral-converter/16044
+ * @example
+ * toRoman(1); // -> I
+ * toRoman(2); // -> II
+ */
+
+function toRoman(num, isLowercase) {
+  if (typeof num !== 'number') return false;
+  var digits = String(+num).split(""),
+      key = ["", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM", "", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC", "", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"],
+      roman_num = "",
+      i = 3;
+
+  while (i--) {
+    roman_num = (key[+digits.pop() + i * 10] || "") + roman_num;
+  }
+
+  var romanStr = Array(+digits.join("") + 1).join("M") + roman_num;
+  return isLowercase ? lodashEs.lowerCase(romanStr) : romanStr;
+}
+
+/**
+ * @render utils
+ * @name toLetter
+ * @param int
+ * @param uppercase
+ * @returns {string}
+ * @example
+ * toLetter(1); // -> a
+ * toLetter(1, true); // -> A
+ */
+
+function toLetter(_int, isLowercase) {
+  if (isLowercase === void 0) {
+    isLowercase = false;
+  }
+
+  var letter = String.fromCharCode(_int - 1 + 65);
+  return isLowercase ? lodashEs.lowerCase(letter) : letter;
+}
+
 exports.env = env;
 exports.toBool = toBool;
+exports.toLetter = toLetter;
+exports.toRoman = toRoman;
 //# sourceMappingURL=utils.js.map

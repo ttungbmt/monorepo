@@ -1,0 +1,12 @@
+### MOBILE
+    @capacitor/android
+    @capacitor/core
+    @ionic/pwa-elements
+    @ionic/react
+    @ionic/react-hooks
+    @ionic/react-router
+    ionicons
+
+    DEV
+    @capacitor/cli
+

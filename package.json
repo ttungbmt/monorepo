@@ -4,7 +4,8 @@
   "private": true,
   "description": "Lerna Monorepo",
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "web/*"
   ],
   "scripts": {
     "clean": "lerna run --parallel clean",

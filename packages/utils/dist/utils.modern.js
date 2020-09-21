@@ -1,4 +1,4 @@
-import { isString } from 'lodash-es';
+import { isString, lowerCase } from 'lodash-es';
 import dotenv from 'dotenv';
 import { toLower } from 'lodash';
 import collect from 'collect.js';
@@ -66,5 +66,46 @@ function env(key, _default = null) {
   }).get(key, _default);
 }
 
-export { env, toBool };
+/**
+ * @render utils
+ * @name toRoman
+ * @param num
+ * @returns {string}
+ * @description Convert number to roman.
+ * https://forum.freecodecamp.org/t/freecodecamp-challenge-guide-roman-numeral-converter/16044
+ * @example
+ * toRoman(1); // -> I
+ * toRoman(2); // -> II
+ */
+
+function toRoman(num, isLowercase) {
+  if (typeof num !== 'number') return false;
+  let digits = String(+num).split(""),
+      key = ["", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM", "", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC", "", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"],
+      roman_num = "",
+      i = 3;
+
+  while (i--) roman_num = (key[+digits.pop() + i * 10] || "") + roman_num;
+
+  let romanStr = Array(+digits.join("") + 1).join("M") + roman_num;
+  return isLowercase ? lowerCase(romanStr) : romanStr;
+}
+
+/**
+ * @render utils
+ * @name toLetter
+ * @param int
+ * @param uppercase
+ * @returns {string}
+ * @example
+ * toLetter(1); // -> a
+ * toLetter(1, true); // -> A
+ */
+
+function toLetter(int, isLowercase = false) {
+  let letter = String.fromCharCode(int - 1 + 65);
+  return isLowercase ? lowerCase(letter) : letter;
+}
+
+export { env, toBool, toLetter, toRoman };
 //# sourceMappingURL=utils.modern.js.map

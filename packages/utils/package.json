@@ -9,8 +9,12 @@
   "sideEffects": false,
   "scripts": {
     "clean": "rm -rf dist/*",
-    "dev": "microbundle watch --no-compress --format modern,cjs",
-    "build": "microbundle --no-compress --format modern,cjs"
+    "watch": "microbundle watch --no-compress --format modern,cjs --css-modules false",
+    "watch:push": "run-p watch yalc-watch",
+    "build": "microbundle --no-compress --format modern,cjs --css-modules false",
+    "build:push": "run-s build push",
+    "yalc-watch": "nodemon -x yalc push",
+    "push": "yalc push"
   },
   "devDependencies": {},
   "dependencies": {

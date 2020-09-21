@@ -1,5 +1,6 @@
 # IDEA
 .idea/
+packages/fuse
 
 # Node
 node_modules
